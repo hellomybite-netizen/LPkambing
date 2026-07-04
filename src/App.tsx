@@ -298,22 +298,69 @@ export default function App() {
 
       {/* ── JOURNEY ── */}
       <section className="max-w-6xl mx-auto px-5 py-16">
-        <div className="text-center mb-12">
+
+        <div className="text-center mb-10">
           <span className="inline-block text-xs font-black uppercase tracking-widest text-amber-600 bg-amber-100 px-4 py-1.5 rounded-full mb-4">
-            Perjalanan Nyata dari Lapangan
+            Kenalan Dulu dengan Pematerinya
           </span>
           <h2 className="text-3xl lg:text-4xl font-black text-[#17351f] leading-tight mb-4">
-            Dari 10 Ekor, Dibangun Pelan-Pelan,
-            <br className="hidden sm:block" /> Sampai Ratusan Ekor
+            Perjalanan Nyata dari Lapangan
           </h2>
-          <p className="text-[#526354] max-w-xl mx-auto text-base leading-relaxed">
-            Ini bukan kisah sukses instan. Ini proses panjang — trial, error, evaluasi, dan perbaikan sistem — yang dilakukan Mas Ony sendiri di lapangan Singosari, Malang.
-          </p>
+        </div>
+
+        {/* Intro card – perkenalan Mas Ony */}
+        <div className="bg-white border border-[#e8dfc8] rounded-3xl overflow-hidden shadow-sm mb-10">
+          <div className="flex flex-col md:flex-row">
+
+            {/* Foto placeholder */}
+            <div className="md:w-64 lg:w-72 flex-shrink-0 bg-[#e8dfc8] flex flex-col items-center justify-center py-12 px-6 gap-3">
+              <div className="w-28 h-28 rounded-full bg-[#c8b898] border-4 border-white shadow-md flex items-center justify-center overflow-hidden">
+                {/* Ganti src di bawah ini dengan foto asli Mas Ony */}
+                <svg viewBox="0 0 80 80" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="80" height="80" fill="#a08060"/>
+                  <circle cx="40" cy="30" r="16" fill="#c8a878"/>
+                  <ellipse cx="40" cy="70" rx="24" ry="18" fill="#c8a878"/>
+                </svg>
+              </div>
+              <div className="text-center">
+                <p className="font-black text-[#17351f] text-base">Mas Ony</p>
+                <p className="text-[#7a6040] text-xs mt-0.5">Peternak · Balakosa Farm</p>
+                <p className="text-[#7a6040] text-xs">Singosari, Malang</p>
+              </div>
+              <div className="mt-1 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">
+                📸 Foto menyusul
+              </div>
+            </div>
+
+            {/* Narasi */}
+            <div className="flex-1 p-7 lg:p-9">
+              <p className="text-[#17351f] text-base font-black mb-4 leading-snug">
+                "Halo, perkenalkan — saya Ony, dari Singosari, Malang."
+              </p>
+              <div className="space-y-3 text-[#526354] text-sm leading-relaxed">
+                <p>
+                  Saya bukan orang yang dari awal sudah tahu cara beternak. Dulu saya mulai dari nol — tidak ada latar belakang pertanian, tidak ada mentor, tidak ada sistem. Yang ada hanya keinginan untuk mencoba.
+                </p>
+                <p>
+                  Tahun pertama, saya mulai dengan <strong className="text-[#17351f]">10 ekor domba</strong>. Kandang seadanya. Pakan dicoba-coba. Banyak yang mati, banyak yang salah. Tapi saya catat semua, dan terus diperbaiki.
+                </p>
+                <p>
+                  Pelan-pelan populasi tumbuh. Sistem mulai terbentuk. Sampai akhirnya dalam <strong className="text-[#17351f]">2,5 tahun</strong>, kandang saya pernah menampung <strong className="text-[#17351f]">lebih dari 200 ekor domba</strong>.
+                </p>
+                <p>
+                  Hari ini saya stabilkan di sekitar <strong className="text-[#17351f]">180 ekor</strong> — bukan karena tidak bisa lebih, tapi karena saya belajar bahwa bukan jumlahnya yang paling penting. <em>Sistemnya</em> yang paling penting.
+                </p>
+                <p className="text-[#17351f] font-semibold">
+                  Dan di webinar ini, saya ingin berbagi semua yang saya pelajari — agar Anda tidak perlu mengulang kesalahan yang sama.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical connector line (desktop) */}
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 bottom-6 w-0.5 bg-gradient-to-b from-emerald-700 via-amber-400 to-emerald-900" />
 
           <div className="flex flex-col gap-8">
@@ -326,12 +373,10 @@ export default function App() {
                 </span>
                 <h3 className="text-xl font-black text-[#17351f] mb-2">Mulai dari 10 Ekor</h3>
                 <p className="text-[#526354] text-sm leading-relaxed">
-                  Tidak ada sistem, tidak ada template. Kandang pertama dibangun sederhana, pakan masih coba-coba, pencatatan belum ada. Belajar dari nol langsung di lapangan.
+                  Tidak ada sistem, tidak ada template. Kandang pertama dibangun sederhana, pakan masih coba-coba, pencatatan belum ada. Belajar dari nol langsung di lapangan — dan membayar mahal dari setiap kesalahan.
                 </p>
               </div>
-              <div className="z-10 w-12 h-12 rounded-full bg-emerald-700 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
-                1
-              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-emerald-700 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">1</div>
               <div className="md:w-1/2 md:pl-10 order-3">
                 <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 text-sm text-emerald-800 font-semibold">
                   🐑 10 ekor — modal awal, sistem belum ada
@@ -350,9 +395,7 @@ export default function App() {
                   Di titik ini mulai ada pencatatan kelahiran, seleksi indukan, dan perhatian lebih ke manajemen pakan. Bukan karena sudah tahu semua jawaban — tapi karena mulai tahu pertanyaan yang benar.
                 </p>
               </div>
-              <div className="z-10 w-12 h-12 rounded-full bg-amber-500 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
-                2
-              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-amber-500 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">2</div>
               <div className="md:w-1/2 md:pr-10 md:text-right order-3">
                 <div className="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 text-sm text-amber-800 font-semibold">
                   📋 ~20 ekor — pencatatan & seleksi mulai jalan
@@ -371,9 +414,7 @@ export default function App() {
                   Dalam 2,5 tahun populasi pernah mencapai ±200 ekor. Bukan tanpa tantangan — justru di fase ini banyak keputusan sulit harus diambil: jual atau simpan, tambah atau stabilkan, kapasitas kandang vs. target populasi.
                 </p>
               </div>
-              <div className="z-10 w-12 h-12 rounded-full bg-emerald-800 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
-                3
-              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-emerald-800 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">3</div>
               <div className="md:w-1/2 md:pl-10 order-3">
                 <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 text-sm text-emerald-800 font-semibold">
                   🎯 ±200 ekor — puncak dalam 2,5 tahun
@@ -392,9 +433,7 @@ export default function App() {
                   Populasi sengaja distabilkan sesuai kapasitas nyata: daya tampung kandang, ketersediaan pakan, dan kemampuan pencatatan harian. Bukan sebanyak mungkin — tapi sekuat sistem mampu menopang.
                 </p>
               </div>
-              <div className="z-10 w-12 h-12 rounded-full bg-amber-600 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
-                4
-              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-amber-600 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">4</div>
               <div className="md:w-1/2 md:pr-10 md:text-right order-3">
                 <div className="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 text-sm text-amber-800 font-semibold">
                   ⚖️ ~180 ekor — stabil, terkontrol, berkelanjutan
@@ -408,12 +447,13 @@ export default function App() {
         {/* Bottom quote */}
         <div className="mt-12 bg-[#17351f] text-white rounded-3xl px-8 py-7 text-center">
           <p className="text-xl font-black mb-2 leading-snug">
-            "Bukan teori buku. Ini cerita nyata dari lapangan."
+            "Saya tidak ingin Anda membayar mahal dari kesalahan yang bisa dihindari."
           </p>
           <p className="text-emerald-300 text-sm">
             Mas Ony akan berbagi langsung — proses, kesalahan, dan sistem yang akhirnya berjalan.
           </p>
         </div>
+
       </section>
 
       {/* ── MATERI ── */}

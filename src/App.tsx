@@ -142,11 +142,11 @@ export default function App() {
     e.preventDefault();
     const nomorAdmin = "6281234567890";
     const pesan =
-      `Halo Admin, saya ingin mendaftar Webinar Ternak Domba (Rp149.000).%0A%0A` +
+      `Halo Admin, saya ingin mendaftar Webinar Ternak Domba (Gratis).%0A%0A` +
       `Nama: ${encodeURIComponent(formData.nama)}%0A` +
       `No. WhatsApp: ${encodeURIComponent(formData.wa)}%0A` +
       `Kota: ${encodeURIComponent(formData.kota)}%0A%0A` +
-      `Mohon dikirimkan info rekening pembayaran dan link Zoom webinar.`;
+      `Mohon dikirimkan link Zoom webinar.`;
     window.open(`https://wa.me/${nomorAdmin}?text=${pesan}`, "_blank");
     setSubmitted(true);
   }
@@ -171,7 +171,7 @@ export default function App() {
             <div className="flex-1 text-white">
               <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full mb-7 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                WEBINAR BERBAYAR · ONLINE VIA ZOOM
+                WEBINAR GRATIS · ONLINE VIA ZOOM
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-lg">
@@ -216,7 +216,7 @@ export default function App() {
                   href="#daftar"
                   className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-[#0a2410] font-black text-base px-7 py-4 rounded-2xl shadow-lg shadow-amber-400/30 transition-all hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  DAFTAR SEKARANG — Rp149.000
+                  DAFTAR SEKARANG
                   <ArrowRight size={18} />
                 </a>
                 <a
@@ -249,7 +249,6 @@ export default function App() {
                     { icon: <Clock size={16} className="text-amber-500" />, text: "19.30 – 21.30 WIB" },
                     { icon: <MapPin size={16} className="text-amber-500" />, text: "Online via Zoom" },
                     { icon: <Gift size={16} className="text-amber-500" />, text: "Bonus e-book & template simulasi" },
-                  { icon: <ShieldCheck size={16} className="text-amber-500" />, text: "Harga: Rp149.000 / peserta" },
                   ].map((row) => (
                     <div key={row.text} className="flex items-center gap-3 text-sm font-semibold text-[#17351f]">
                       <span className="w-7 h-7 bg-amber-50 rounded-full flex items-center justify-center flex-shrink-0">
@@ -484,7 +483,7 @@ export default function App() {
               href="#daftar"
               className="inline-flex items-center gap-2 bg-[#17351f] hover:bg-[#1f4a28] text-white font-black text-base px-8 py-4 rounded-2xl transition-colors shadow-md shadow-[#17351f]/20"
             >
-              Daftar Sekarang — Rp149.000
+              Daftar Sekarang
               <ArrowRight size={18} />
             </a>
           </div>
@@ -506,7 +505,7 @@ export default function App() {
                 Bonus Peserta
               </span>
               <h3 className="font-black text-2xl text-white mb-2">Semua Peserta Mendapatkan</h3>
-              <p className="text-white/60 text-sm mb-6">Dikirim langsung via WhatsApp setelah pembayaran dikonfirmasi.</p>
+              <p className="text-white/60 text-sm mb-6">Dikirim langsung via WhatsApp setelah pendaftaran dikonfirmasi.</p>
 
               <div className="space-y-3 mb-7">
                 {[
@@ -544,20 +543,8 @@ export default function App() {
               Amankan Kursi Webinar
             </h3>
             <p className="text-[#526354] text-sm mb-1">
-              Isi data berikut. Tim kami akan mengirimkan instruksi pembayaran dan link Zoom melalui WhatsApp.
+              Isi data berikut. Tim kami akan mengirimkan link Zoom melalui WhatsApp.
             </p>
-
-            {/* Price badge */}
-            <div className="flex items-center gap-3 bg-[#f5f0e4] border border-[#e8dfc8] rounded-2xl px-4 py-3 mb-6">
-              <div className="flex-1">
-                <p className="text-xs text-[#8a907e] font-semibold uppercase tracking-wide">Harga Webinar</p>
-                <p className="text-2xl font-black text-[#17351f]">Rp149.000</p>
-              </div>
-              <div className="text-right">
-                <p className="text-xs text-[#8a907e] line-through">Rp350.000</p>
-                <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-black px-2 py-0.5 rounded-full">Hemat 57%</span>
-              </div>
-            </div>
 
             <div className="grid grid-cols-3 gap-2 mb-6">
               {[
@@ -581,7 +568,7 @@ export default function App() {
                   <CheckCircle2 size={32} className="text-emerald-600" />
                 </div>
                 <h4 className="font-black text-[#17351f] text-xl mb-2">Pendaftaran Dikirim!</h4>
-                <p className="text-[#526354] text-sm">Jendela WhatsApp baru telah terbuka. Kirim pesan untuk menyelesaikan pembayaran dan mendapatkan link Zoom.</p>
+                <p className="text-[#526354] text-sm">Jendela WhatsApp baru telah terbuka. Kirim pesan untuk mendapatkan link Zoom webinar.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -607,7 +594,7 @@ export default function App() {
                   type="submit"
                   className="w-full mt-2 flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-[#0a2410] font-black text-base px-6 py-4 rounded-xl shadow-md shadow-amber-400/25 transition-all hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  DAFTAR & BAYAR SEKARANG — Rp149.000
+                  DAFTAR SEKARANG
                   <ArrowRight size={18} />
                 </button>
               </form>
@@ -637,7 +624,7 @@ export default function App() {
           href="#daftar"
           className="flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-[#0a2410] font-black text-base px-6 py-4 rounded-xl w-full shadow-md shadow-amber-400/20 transition-colors"
         >
-          DAFTAR SEKARANG — Rp149.000
+          DAFTAR SEKARANG
           <ArrowRight size={18} />
         </a>
       </div>

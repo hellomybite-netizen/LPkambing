@@ -424,7 +424,7 @@ export default function App() {
               Kurikulum Webinar
             </span>
             <h2 className="text-3xl lg:text-4xl font-black leading-tight mb-4">
-              Apa yang Akan Anda Pelajari?
+              Ini yang Akan Saya Ajarkan kepada Anda di Webinar Online Nanti
             </h2>
             <p className="text-white/60 max-w-xl mx-auto text-base">
               Webinar dibuat ringkas, praktis, dan fokus pada angka agar peserta paham cara kerja investasi kambing dari awal.

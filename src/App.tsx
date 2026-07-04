@@ -166,26 +166,18 @@ export default function App() {
         <div className="relative z-10 max-w-6xl mx-auto px-5 pt-14 pb-20 lg:pt-24 lg:pb-28">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
-            {/* Left */}
+            {/* Left – teks */}
             <div className="flex-1 text-white">
-              {/* Foto Mas Ony di atas judul */}
-              <div className="flex items-center gap-4 mb-7">
-                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-amber-400 shadow-lg flex-shrink-0">
-                  <img src="/ony-1.jpg" alt="Mas Ony" className="w-full h-full object-cover object-top" />
-                </div>
-                <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full backdrop-blur-sm">
-                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                  WEBINAR · ONLINE VIA ZOOM
-                </div>
+              <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full mb-7 backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                WEBINAR · ONLINE VIA ZOOM
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-lg">
                 <span className="text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.8)]">Rahasia Sukses Ternak Domba</span>
                 <br />
-                <span className="relative inline-block">
-                  <span className="relative z-10 text-amber-400 [text-shadow:0_2px_24px_rgba(251,191,36,0.6)]">
-                    Dari 10 Ekor Jadi 200 Ekor
-                  </span>
+                <span className="relative z-10 text-amber-400 [text-shadow:0_2px_24px_rgba(251,191,36,0.6)]">
+                  Dari 10 Ekor Jadi 200 Ekor
                 </span>
                 <br />
                 <span className="bg-white text-[#0a2410] px-3 py-1 rounded-xl inline-block mt-1 text-3xl sm:text-4xl lg:text-5xl">
@@ -202,9 +194,9 @@ export default function App() {
               {/* 3 stats */}
               <div className="grid grid-cols-3 gap-3 mb-9">
                 {[
-                  { label: "Cocok Pemula", icon: <Users size={18} /> },
-                  { label: "Modal Fleksibel", icon: <BarChart3 size={18} /> },
-                  { label: "Ada Simulasi", icon: <TrendingUp size={18} /> },
+                  { label: "Case Study Nyata", icon: <Users size={18} /> },
+                  { label: "Sistem Breeding", icon: <BarChart3 size={18} /> },
+                  { label: "Dari Lapangan", icon: <TrendingUp size={18} /> },
                 ].map((s) => (
                   <div
                     key={s.label}
@@ -239,21 +231,32 @@ export default function App() {
               </p>
             </div>
 
-            {/* Right – Event card */}
-            <div className="w-full lg:w-[360px] flex-shrink-0">
-              <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl shadow-black/30">
-                <div className="aspect-[16/9] rounded-2xl overflow-hidden mb-5">
-                  <img src={GOAT_HERD} alt="Domba" className="w-full h-full object-cover" />
+            {/* Right – Foto Mas Ony besar + event card */}
+            <div className="w-full lg:w-[380px] flex-shrink-0 flex flex-col gap-4">
+
+              {/* Foto besar Mas Ony */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40" style={{ height: 420 }}>
+                <img
+                  src="/ony-1.jpg"
+                  alt="Mas Ony — Peternak Balakosa Farm, Singosari Malang"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a2410]/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-white font-black text-base leading-tight">Mas Ony</p>
+                  <p className="text-amber-300 text-xs mt-0.5">Peternak · Balakosa Farm, Singosari Malang</p>
                 </div>
+              </div>
 
-                <h3 className="text-[#0a2410] font-black text-xl mb-4">Detail Webinar</h3>
-
-                <div className="space-y-3">
+              {/* Event card */}
+              <div className="bg-white/95 backdrop-blur-md rounded-3xl p-5 shadow-xl shadow-black/20">
+                <h3 className="text-[#0a2410] font-black text-base mb-3">Detail Webinar</h3>
+                <div className="space-y-2.5">
                   {[
-                    { icon: <Calendar size={16} className="text-amber-500" />, text: "Rabu, 23 Juli 2026" },
-                    { icon: <Clock size={16} className="text-amber-500" />, text: "19.30 – 21.30 WIB" },
-                    { icon: <MapPin size={16} className="text-amber-500" />, text: "Online via Zoom" },
-                    { icon: <Gift size={16} className="text-amber-500" />, text: "Bonus e-book & template simulasi" },
+                    { icon: <Calendar size={15} className="text-amber-500" />, text: "Rabu, 23 Juli 2026" },
+                    { icon: <Clock size={15} className="text-amber-500" />, text: "19.30 – 21.30 WIB" },
+                    { icon: <MapPin size={15} className="text-amber-500" />, text: "Online via Zoom" },
+                    { icon: <Gift size={15} className="text-amber-500" />, text: "Bonus e-book & template simulasi" },
                   ].map((row) => (
                     <div key={row.text} className="flex items-center gap-3 text-sm font-semibold text-[#17351f]">
                       <span className="w-7 h-7 bg-amber-50 rounded-full flex items-center justify-center flex-shrink-0">
@@ -263,15 +266,15 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-
                 <a
                   href="#daftar"
-                  className="mt-5 flex items-center justify-center gap-2 bg-[#17351f] hover:bg-[#1f4a28] text-white font-black text-sm px-5 py-3.5 rounded-xl w-full transition-colors"
+                  className="mt-4 flex items-center justify-center gap-2 bg-[#17351f] hover:bg-[#1f4a28] text-white font-black text-sm px-5 py-3 rounded-xl w-full transition-colors"
                 >
                   Amankan Kursi Saya
                   <ArrowRight size={15} />
                 </a>
               </div>
+
             </div>
           </div>
         </div>

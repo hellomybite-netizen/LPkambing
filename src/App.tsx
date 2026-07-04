@@ -171,7 +171,7 @@ export default function App() {
             <div className="flex-1 text-white">
               <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full mb-7 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                WEBINAR GRATIS · ONLINE VIA ZOOM
+                WEBINAR · ONLINE VIA ZOOM
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-lg">

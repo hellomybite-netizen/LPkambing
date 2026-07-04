@@ -296,68 +296,123 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── WHY ── */}
+      {/* ── JOURNEY ── */}
       <section className="max-w-6xl mx-auto px-5 py-16">
         <div className="text-center mb-12">
           <span className="inline-block text-xs font-black uppercase tracking-widest text-amber-600 bg-amber-100 px-4 py-1.5 rounded-full mb-4">
-            Mengapa Kambing?
+            Perjalanan Nyata dari Lapangan
           </span>
           <h2 className="text-3xl lg:text-4xl font-black text-[#17351f] leading-tight mb-4">
-            Kenapa Investasi Kambing Mulai
-            <br className="hidden sm:block" /> Banyak Dilirik?
+            Dari 10 Ekor, Dibangun Pelan-Pelan,
+            <br className="hidden sm:block" /> Sampai Ratusan Ekor
           </h2>
           <p className="text-[#526354] max-w-xl mx-auto text-base leading-relaxed">
-            Karena kambing adalah aset nyata yang mudah dipahami, bisa dihitung, dan memiliki permintaan yang terus berulang setiap tahun.
+            Ini bukan kisah sukses instan. Ini proses panjang — trial, error, evaluasi, dan perbaikan sistem — yang dilakukan Mas Ony sendiri di lapangan Singosari, Malang.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-5">
-          {[
-            {
-              img: GOAT_HERD,
-              icon: <Leaf size={20} className="text-emerald-600" />,
-              title: "Aset Nyata & Terukur",
-              desc: "Bukan sekadar angka di layar. Ternak bisa dilihat, dipantau, dan dikembangkan secara transparan.",
-              color: "bg-emerald-50 border-emerald-100",
-            },
-            {
-              img: FARM_LANDSCAPE,
-              icon: <TrendingUp size={20} className="text-amber-600" />,
-              title: "Potensi Bertumbuh",
-              desc: "Nilai aset bisa berkembang melalui breeding, penggemukan, dan penjualan di pasar lokal.",
-              color: "bg-amber-50 border-amber-100",
-            },
-            {
-              img: MARKET_IMG,
-              icon: <Star size={20} className="text-sky-600" />,
-              title: "Permintaan Berulang",
-              desc: "Kebutuhan daging, aqiqah, dan kurban membuat pasar peternakan selalu aktif sepanjang tahun.",
-              color: "bg-sky-50 border-sky-100",
-            },
-          ].map((c) => (
-            <div
-              key={c.title}
-              className="bg-white rounded-3xl overflow-hidden border border-[#e8dfc8] shadow-sm hover:shadow-md transition-shadow group"
-            >
-              <div className="relative h-44 overflow-hidden">
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical connector line (desktop) */}
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-6 bottom-6 w-0.5 bg-gradient-to-b from-emerald-700 via-amber-400 to-emerald-900" />
+
+          <div className="flex flex-col gap-8">
+
+            {/* Step 1 */}
+            <div className="flex flex-col md:flex-row items-center gap-5">
+              <div className="md:w-1/2 md:text-right md:pr-10 order-2 md:order-1">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full mb-2">
+                  Titik Awal
+                </span>
+                <h3 className="text-xl font-black text-[#17351f] mb-2">Mulai dari 10 Ekor</h3>
+                <p className="text-[#526354] text-sm leading-relaxed">
+                  Tidak ada sistem, tidak ada template. Kandang pertama dibangun sederhana, pakan masih coba-coba, pencatatan belum ada. Belajar dari nol langsung di lapangan.
+                </p>
               </div>
-              <div className="p-5">
-                <div
-                  className={`w-9 h-9 ${c.color} border rounded-xl flex items-center justify-center mb-3`}
-                >
-                  {c.icon}
+              <div className="z-10 w-12 h-12 rounded-full bg-emerald-700 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
+                1
+              </div>
+              <div className="md:w-1/2 md:pl-10 order-3">
+                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 text-sm text-emerald-800 font-semibold">
+                  🐑 10 ekor — modal awal, sistem belum ada
                 </div>
-                <h4 className="font-black text-[#17351f] text-lg mb-2">{c.title}</h4>
-                <p className="text-[#526354] text-sm leading-relaxed">{c.desc}</p>
               </div>
             </div>
-          ))}
+
+            {/* Step 2 */}
+            <div className="flex flex-col md:flex-row-reverse items-center gap-5">
+              <div className="md:w-1/2 md:text-left md:pl-10 order-2 md:order-1">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full mb-2">
+                  Mulai Serius
+                </span>
+                <h3 className="text-xl font-black text-[#17351f] mb-2">~20 Ekor: Sistem Mulai Dibangun</h3>
+                <p className="text-[#526354] text-sm leading-relaxed">
+                  Di titik ini mulai ada pencatatan kelahiran, seleksi indukan, dan perhatian lebih ke manajemen pakan. Bukan karena sudah tahu semua jawaban — tapi karena mulai tahu pertanyaan yang benar.
+                </p>
+              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-amber-500 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
+                2
+              </div>
+              <div className="md:w-1/2 md:pr-10 md:text-right order-3">
+                <div className="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 text-sm text-amber-800 font-semibold">
+                  📋 ~20 ekor — pencatatan & seleksi mulai jalan
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col md:flex-row items-center gap-5">
+              <div className="md:w-1/2 md:text-right md:pr-10 order-2 md:order-1">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full mb-2">
+                  Puncak Populasi
+                </span>
+                <h3 className="text-xl font-black text-[#17351f] mb-2">Pernah Menyentuh ±200 Ekor</h3>
+                <p className="text-[#526354] text-sm leading-relaxed">
+                  Dalam 2,5 tahun populasi pernah mencapai ±200 ekor. Bukan tanpa tantangan — justru di fase ini banyak keputusan sulit harus diambil: jual atau simpan, tambah atau stabilkan, kapasitas kandang vs. target populasi.
+                </p>
+              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-emerald-800 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
+                3
+              </div>
+              <div className="md:w-1/2 md:pl-10 order-3">
+                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 text-sm text-emerald-800 font-semibold">
+                  🎯 ±200 ekor — puncak dalam 2,5 tahun
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex flex-col md:flex-row-reverse items-center gap-5">
+              <div className="md:w-1/2 md:text-left md:pl-10 order-2 md:order-1">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full mb-2">
+                  Kondisi Kini
+                </span>
+                <h3 className="text-xl font-black text-[#17351f] mb-2">Distabilkan di ~180 Ekor</h3>
+                <p className="text-[#526354] text-sm leading-relaxed">
+                  Populasi sengaja distabilkan sesuai kapasitas nyata: daya tampung kandang, ketersediaan pakan, dan kemampuan pencatatan harian. Bukan sebanyak mungkin — tapi sekuat sistem mampu menopang.
+                </p>
+              </div>
+              <div className="z-10 w-12 h-12 rounded-full bg-amber-600 border-4 border-[#f5f0e4] flex items-center justify-center text-white font-black text-lg flex-shrink-0 order-1 md:order-2 shadow-md">
+                4
+              </div>
+              <div className="md:w-1/2 md:pr-10 md:text-right order-3">
+                <div className="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 text-sm text-amber-800 font-semibold">
+                  ⚖️ ~180 ekor — stabil, terkontrol, berkelanjutan
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Bottom quote */}
+        <div className="mt-12 bg-[#17351f] text-white rounded-3xl px-8 py-7 text-center">
+          <p className="text-xl font-black mb-2 leading-snug">
+            "Bukan teori buku. Ini cerita nyata dari lapangan."
+          </p>
+          <p className="text-emerald-300 text-sm">
+            Mas Ony akan berbagi langsung — proses, kesalahan, dan sistem yang akhirnya berjalan.
+          </p>
         </div>
       </section>
 

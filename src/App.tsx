@@ -156,18 +156,18 @@ export default function App() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={GOAT_FARM_HERO} alt="Peternakan domba" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0a2410]/95 via-[#122e18]/90 to-[#1a4a24]/85" />
-          {/* decorative circles */}
+          <img src={GOAT_FARM_HERO} alt="Peternakan domba" className="w-full h-full object-cover object-center" />
+          {/* Mobile: overlay lebih tipis agar foto domba kelihatan */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a2410]/80 via-[#122e18]/85 to-[#1a4a24]/80 lg:from-[#0a2410]/95 lg:via-[#122e18]/90 lg:to-[#1a4a24]/85" />
           <div className="absolute top-[-80px] right-[-80px] w-[420px] h-[420px] rounded-full bg-amber-400/10 blur-3xl" />
           <div className="absolute bottom-[-60px] left-[-60px] w-[300px] h-[300px] rounded-full bg-emerald-400/10 blur-3xl" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-5 pt-14 pb-20 lg:pt-24 lg:pb-28">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-5 pt-8 pb-20 lg:pt-24 lg:pb-28">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
 
-            {/* Left – teks */}
-            <div className="flex-1 text-white">
+            {/* Left – teks (mobile: order 2) */}
+            <div className="flex-1 text-white order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full mb-7 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                 WEBINAR · ONLINE VIA ZOOM
@@ -231,11 +231,11 @@ export default function App() {
               </p>
             </div>
 
-            {/* Right – Foto Mas Ony besar + event card */}
-            <div className="w-full lg:w-[380px] flex-shrink-0 flex flex-col gap-4">
+            {/* Right – Foto Mas Ony besar + event card (mobile: order 1 = paling atas) */}
+            <div className="w-full lg:w-[380px] flex-shrink-0 flex flex-col gap-4 order-1 lg:order-2">
 
               {/* Foto besar Mas Ony */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40" style={{ height: 420 }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40" style={{ height: 480 }}>
                 <img
                   src="/ony-1.jpg"
                   alt="Mas Ony — Peternak Balakosa Farm, Singosari Malang"

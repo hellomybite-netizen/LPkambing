@@ -74,8 +74,7 @@ const TESTIMONIALS = [
   },
 ];
 
-const GOAT_FARM_HERO =
-  "https://images.unsplash.com/photo-1524024973431-2ad916746881?q=80&w=1400&auto=format&fit=crop";
+const GOAT_FARM_HERO = "/ony-3.jpg";
 const GOAT_HERD =
   "https://images.unsplash.com/photo-1533318087102-b3ad366ed041?q=80&w=900&auto=format&fit=crop";
 const FARM_LANDSCAPE =
@@ -312,23 +311,18 @@ export default function App() {
         <div className="bg-white border border-[#e8dfc8] rounded-3xl overflow-hidden shadow-sm mb-10">
           <div className="flex flex-col md:flex-row">
 
-            {/* Foto placeholder */}
-            <div className="md:w-64 lg:w-72 flex-shrink-0 bg-[#e8dfc8] flex flex-col items-center justify-center py-12 px-6 gap-3">
-              <div className="w-28 h-28 rounded-full bg-[#c8b898] border-4 border-white shadow-md flex items-center justify-center overflow-hidden">
-                {/* Ganti src di bawah ini dengan foto asli Mas Ony */}
-                <svg viewBox="0 0 80 80" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="80" height="80" fill="#a08060"/>
-                  <circle cx="40" cy="30" r="16" fill="#c8a878"/>
-                  <ellipse cx="40" cy="70" rx="24" ry="18" fill="#c8a878"/>
-                </svg>
-              </div>
-              <div className="text-center">
-                <p className="font-black text-[#17351f] text-base">Mas Ony</p>
-                <p className="text-[#7a6040] text-xs mt-0.5">Peternak · Balakosa Farm</p>
-                <p className="text-[#7a6040] text-xs">Singosari, Malang</p>
-              </div>
-              <div className="mt-1 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">
-                📸 Foto menyusul
+            {/* Foto Mas Ony */}
+            <div className="md:w-64 lg:w-72 flex-shrink-0 relative overflow-hidden min-h-[320px]">
+              <img
+                src="/ony-1.jpg"
+                alt="Mas Ony bersama domba di Balakosa Farm, Singosari Malang"
+                className="w-full h-full object-cover object-top"
+                style={{ minHeight: 320 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a2410]/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <p className="font-black text-white text-base leading-tight">Mas Ony</p>
+                <p className="text-white/80 text-xs mt-0.5">Peternak · Balakosa Farm, Singosari</p>
               </div>
             </div>
 
@@ -445,13 +439,21 @@ export default function App() {
         </div>
 
         {/* Bottom quote */}
-        <div className="mt-12 bg-[#17351f] text-white rounded-3xl px-8 py-7 text-center">
-          <p className="text-xl font-black mb-2 leading-snug">
-            "Saya tidak ingin Anda membayar mahal dari kesalahan yang bisa dihindari."
-          </p>
-          <p className="text-emerald-300 text-sm">
-            Mas Ony akan berbagi langsung — proses, kesalahan, dan sistem yang akhirnya berjalan.
-          </p>
+        <div className="mt-12 rounded-3xl overflow-hidden relative">
+          <img
+            src="/ony-2.jpg"
+            alt="Mas Ony bersama domba di Balakosa Farm"
+            className="w-full h-56 object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a2410]/90 via-[#0a2410]/60 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 px-8 py-7 text-center">
+            <p className="text-xl font-black text-white mb-2 leading-snug">
+              "Saya tidak ingin Anda membayar mahal dari kesalahan yang bisa dihindari."
+            </p>
+            <p className="text-emerald-300 text-sm">
+              Mas Ony akan berbagi langsung — proses, kesalahan, dan sistem yang akhirnya berjalan.
+            </p>
+          </div>
         </div>
 
       </section>

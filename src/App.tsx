@@ -452,16 +452,22 @@ export default function App() {
           <img
             src="/ony-2.jpg"
             alt="Mas Ony bersama domba di Balakosa Farm"
-            className="w-full h-56 object-cover object-center"
+            className="w-full object-cover object-center"
+            style={{ height: 380 }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a2410]/90 via-[#0a2410]/60 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 px-8 py-7 text-center">
-            <p className="text-xl font-black text-white mb-2 leading-snug">
-              "Saya tidak ingin Anda membayar mahal dari kesalahan yang bisa dihindari."
-            </p>
-            <p className="text-emerald-300 text-sm">
-              Mas Ony akan berbagi langsung — proses, kesalahan, dan sistem yang akhirnya berjalan.
-            </p>
+          {/* Overlay tipis hanya di sudut, foto tetap kelihatan */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a2410]/50" />
+
+          {/* Quote di pojok kiri bawah, minimal */}
+          <div className="absolute bottom-0 left-0 right-0 px-5 py-5">
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/10">
+              <p className="text-base font-black text-white leading-snug mb-1">
+                "Saya tidak ingin Anda membayar mahal dari kesalahan yang bisa dihindari."
+              </p>
+              <p className="text-emerald-300 text-xs leading-relaxed">
+                — Mas Ony, Balakosa Farm
+              </p>
+            </div>
           </div>
         </div>
 

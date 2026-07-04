@@ -41,7 +41,7 @@ const TESTIMONIALS = [
     kota: "Bandung",
     pekerjaan: "Wirausaha",
     rating: 5,
-    text: "Pematerinya kompeten, penjelasan risiko-risikonya jujur dan realistis. Tidak ada yang ditutupi. Justru ini yang bikin saya semakin percaya untuk mulai investasi kambing.",
+    text: "Pematerinya kompeten, penjelasan risiko-risikonya jujur dan realistis. Tidak ada yang ditutupi. Justru ini yang bikin saya semakin percaya untuk mulai investasi domba.",
     avatar: "HK",
     bg: "bg-sky-600",
   },
@@ -156,7 +156,7 @@ export default function App() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={GOAT_FARM_HERO} alt="Peternakan kambing" className="w-full h-full object-cover" />
+          <img src={GOAT_FARM_HERO} alt="Peternakan domba" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a2410]/95 via-[#122e18]/90 to-[#1a4a24]/85" />
           {/* decorative circles */}
           <div className="absolute top-[-80px] right-[-80px] w-[420px] h-[420px] rounded-full bg-amber-400/10 blur-3xl" />
@@ -168,9 +168,15 @@ export default function App() {
 
             {/* Left */}
             <div className="flex-1 text-white">
-              <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full mb-7 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                WEBINAR · ONLINE VIA ZOOM
+              {/* Foto Mas Ony di atas judul */}
+              <div className="flex items-center gap-4 mb-7">
+                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-amber-400 shadow-lg flex-shrink-0">
+                  <img src="/ony-1.jpg" alt="Mas Ony" className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full backdrop-blur-sm">
+                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                  WEBINAR · ONLINE VIA ZOOM
+                </div>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-lg">
@@ -237,7 +243,7 @@ export default function App() {
             <div className="w-full lg:w-[360px] flex-shrink-0">
               <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl shadow-black/30">
                 <div className="aspect-[16/9] rounded-2xl overflow-hidden mb-5">
-                  <img src={GOAT_HERD} alt="Kambing" className="w-full h-full object-cover" />
+                  <img src={GOAT_HERD} alt="Domba" className="w-full h-full object-cover" />
                 </div>
 
                 <h3 className="text-[#0a2410] font-black text-xl mb-4">Detail Webinar</h3>
@@ -469,7 +475,7 @@ export default function App() {
               Ini yang Akan Saya Ajarkan kepada Anda di Webinar Online Nanti
             </h2>
             <p className="text-white/60 max-w-xl mx-auto text-base">
-              Webinar dibuat ringkas, praktis, dan fokus pada angka agar peserta paham cara kerja investasi kambing dari awal.
+              Webinar dibuat ringkas, praktis, dan fokus pada angka agar peserta paham cara kerja investasi domba dari awal.
             </p>
           </div>
 
@@ -606,8 +612,8 @@ export default function App() {
 
               <div className="space-y-3 mb-7">
                 {[
-                  { icon: <BookOpen size={16} />, text: "E-book Panduan Investasi Kambing untuk Pemula" },
-                  { icon: <BarChart3 size={16} />, text: "Template simulasi keuntungan investasi kambing" },
+                  { icon: <BookOpen size={16} />, text: "E-book Panduan Investasi Domba untuk Pemula" },
+                  { icon: <BarChart3 size={16} />, text: "Template simulasi keuntungan investasi domba" },
                   { icon: <CheckCircle2 size={16} />, text: "Rekaman webinar untuk dipelajari ulang" },
                   { icon: <Users size={16} />, text: "Sesi tanya jawab langsung dengan pemateri" },
                 ].map((b) => (
@@ -707,7 +713,7 @@ export default function App() {
       {/* ── FOOTER ── */}
       <footer className="border-t border-[#ddd4bc] py-8">
         <div className="max-w-6xl mx-auto px-5 text-center text-[#8a907e] text-sm">
-          © 2026 Webinar Investasi Kambing. Semua materi bersifat edukasi dan bukan jaminan hasil investasi.
+          © 2026 Webinar Investasi Domba. Semua materi bersifat edukasi dan bukan jaminan hasil investasi.
         </div>
       </footer>
 

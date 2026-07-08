@@ -11,7 +11,6 @@ import {
   ChevronDown,
   Star,
   ArrowRight,
-  Leaf,
   BarChart3,
   BookOpen,
   Quote,
@@ -75,16 +74,11 @@ const TESTIMONIALS = [
 ];
 
 const GOAT_FARM_HERO = "/ony-3.jpg";
-const GOAT_HERD =
-  "https://images.unsplash.com/photo-1533318087102-b3ad366ed041?q=80&w=900&auto=format&fit=crop";
-const FARM_LANDSCAPE =
-  "https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=900&auto=format&fit=crop";
 const INVESTMENT_CALC =
   "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=900&auto=format&fit=crop";
 const EBOOK_IMG =
   "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=900&auto=format&fit=crop";
-const MARKET_IMG =
-  "https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=900&auto=format&fit=crop";
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "";
 
 function CountUp({ end, suffix = "" }: { end: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -139,14 +133,17 @@ export default function App() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const nomorAdmin = "6281234567890";
-    const pesan =
-      `Halo Admin, saya ingin mendaftar Webinar Ternak Domba (Gratis).%0A%0A` +
-      `Nama: ${encodeURIComponent(formData.nama)}%0A` +
-      `No. WhatsApp: ${encodeURIComponent(formData.wa)}%0A` +
-      `Kota: ${encodeURIComponent(formData.kota)}%0A%0A` +
-      `Mohon dikirimkan link Zoom webinar.`;
-    window.open(`https://wa.me/${nomorAdmin}?text=${pesan}`, "_blank");
+    const pesan = [
+      "Halo Admin, saya ingin mendaftar Webinar Ternak Domba.",
+      "",
+      `Nama: ${formData.nama}`,
+      `No. WhatsApp: ${formData.wa}`,
+      `Kota: ${formData.kota}`,
+      "",
+      "Mohon dikirimkan info pendaftaran dan link Zoom webinar.",
+    ].join("\n");
+    const tujuan = WHATSAPP_NUMBER ? `/${WHATSAPP_NUMBER}` : "";
+    window.open(`https://wa.me${tujuan}?text=${encodeURIComponent(pesan)}`, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   }
 
@@ -166,19 +163,24 @@ export default function App() {
         <div className="relative z-10 max-w-6xl mx-auto px-5 pt-8 pb-20 lg:pt-24 lg:pb-28">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
 
-            {/* Left – teks (mobile: order 2) */}
-            <div className="flex-1 text-white order-2 lg:order-1">
+            {/* Left – teks */}
+            <div className="flex-1 text-white order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-sm font-bold px-4 py-2 rounded-full mb-7 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                 WEBINAR · ONLINE VIA ZOOM
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-lg">
+              <h1
+                aria-label="Rahasia Sukses Ternak Domba dari 10 ekor jadi 200 ekor dalam 2,5 tahun"
+                className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-lg"
+              >
                 <span className="text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.8)]">Rahasia Sukses Ternak Domba</span>
+                {" "}
                 <br />
                 <span className="relative z-10 text-amber-400 [text-shadow:0_2px_24px_rgba(251,191,36,0.6)]">
                   Dari 10 Ekor Jadi 200 Ekor
                 </span>
+                {" "}
                 <br />
                 <span className="bg-white text-[#0a2410] px-3 py-1 rounded-xl inline-block mt-1 text-3xl sm:text-4xl lg:text-5xl">
                   dalam 2,5 Tahun
@@ -231,8 +233,8 @@ export default function App() {
               </p>
             </div>
 
-            {/* Right – Foto Mas Ony besar + event card (mobile: order 1 = paling atas) */}
-            <div className="w-full lg:w-[380px] flex-shrink-0 flex flex-col gap-4 order-1 lg:order-2">
+            {/* Right – Foto Mas Ony besar + event card */}
+            <div className="w-full lg:w-[380px] flex-shrink-0 flex flex-col gap-4 order-2 lg:order-2">
 
               {/* Foto besar Mas Ony */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40" style={{ height: 480 }}>
@@ -253,7 +255,7 @@ export default function App() {
                 <h3 className="text-[#0a2410] font-black text-base mb-3">Detail Webinar</h3>
                 <div className="space-y-2.5">
                   {[
-                    { icon: <Calendar size={15} className="text-amber-500" />, text: "Rabu, 23 Juli 2026" },
+                    { icon: <Calendar size={15} className="text-amber-500" />, text: "Kamis, 23 Juli 2026" },
                     { icon: <Clock size={15} className="text-amber-500" />, text: "19.30 – 21.30 WIB" },
                     { icon: <MapPin size={15} className="text-amber-500" />, text: "Online via Zoom" },
                     { icon: <Gift size={15} className="text-amber-500" />, text: "Bonus e-book & template simulasi" },
